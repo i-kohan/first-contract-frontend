@@ -1,7 +1,7 @@
 import { TonConnectButton } from "@tonconnect/ui-react";
-import { useMainContract } from "../hooks/useMainContract";
+import { useMainContract } from "./hooks/useMainContract";
 import "./App.css";
-import { useTonConnect } from "../hooks/useTonConnect";
+import { useTonConnect } from "./hooks/useTonConnect";
 import { fromNano } from "ton-core";
 
 function App() {

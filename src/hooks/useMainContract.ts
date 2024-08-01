@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Address, OpenedContract, fromNano } from "ton-core";
+import { Address, OpenedContract } from "ton-core";
 import { toNano } from "ton-core";
 
 import { useTonConnect } from "./useTonConnect";
@@ -10,9 +10,6 @@ import { MainContract } from "../contracts/MainContract";
 export function useMainContract() {
   const client = useTonClient();
   const { sender } = useTonConnect();
-
-  const sleep = (time: number) =>
-    new Promise((resolve) => setTimeout(resolve, time));
 
   const [contractData, setContractData] = useState<null | {
     counter_value: number;
